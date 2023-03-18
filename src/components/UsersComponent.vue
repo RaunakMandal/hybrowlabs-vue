@@ -117,4 +117,10 @@ export default {
 .sort__colname {
   margin-right: 16px;
 }
+
+@media only screen and (min-width:320px) and (max-width:768px){
+  .users__list {
+    padding: 16px 24px;
+  }
+}
 </style>
