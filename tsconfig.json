@@ -5,7 +5,10 @@
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
-    }
+    },
+    "allowJs": true,
+    "target": "ESNext",
+    "types": ["vite/client"]
   },
 
   "references": [

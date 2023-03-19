@@ -1,5 +1,6 @@
 <script>
 export default {
+  name: 'SingleItem',
   props: {
     type: {
       type: String,
@@ -39,7 +40,7 @@ export default {
     v-if="type === 'user'"
   >
     <div class="user__avatar">
-      <p>{{ name.charAt(0) }} {{ name.charAt(name.indexOf(' ') + 1) }}</p>
+      <img :src="avatarUrl" alt="avatar"  />
     </div>
     <div class="user__info">
       <h2>{{ name }}</h2>
@@ -54,7 +55,7 @@ export default {
   </div>
 </template>
 
-<style>
+<style scoped>
 .container {
   display: flex;
   align-items: center;
@@ -66,26 +67,23 @@ export default {
 }
 
 .container:hover {
-  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255),
-    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
 }
 
 .user__avatar {
   height: 48px;
   width: 48px;
-  border-radius: 50%;
   margin-right: 16px;
-  background-color: #666;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.user__avatar p {
-  margin: 0;
-  color: #fff;
-  font-weight: 700;
+.user__avatar img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
 }
 
 .user__info h2 {
