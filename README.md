@@ -22,4 +22,4 @@ npm run dev
 4. Head over to http://localhost:5173/ to see the app in action.
 
 ## Hosted URL
-### [Netlify URL]('https://regal-cucurucho-e9cf3d.netlify.app/users')
+### [Netlify URL](https://regal-cucurucho-e9cf3d.netlify.app/users)
