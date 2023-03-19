@@ -12,14 +12,18 @@ git clone https://github.com/RaunakMandal/hybrowlabs-vue.git
 ```sh
 npm install
 ```
+3. Create a `.env` file and add the key-value pair
+```
+VITE_API_URL=<your_api_url> or you can ask me for the URL
+```
 
-3. Once the installations are complete, run
+4. Once the installations are complete, run
 
 ```sh
 npm run dev
 ```
 
-4. Head over to http://localhost:5173/ to see the app in action.
+5. Head over to http://localhost:5173/ to see the app in action.
 
 ## Hosted URL
 ### [Netlify URL](https://regal-cucurucho-e9cf3d.netlify.app/users)
