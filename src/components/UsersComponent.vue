@@ -26,7 +26,7 @@ export default {
   methods: {
     getUsers() {
       axios
-        .get(`http://localhost:8080/users?_page=${this.page}`)
+        .get(`${import.meta.env.VITE_API_URL}/users?_page=${this.page}`)
         .then((response) => {
           if (!response.data) {
             throw new Error('No users found')

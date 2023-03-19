@@ -17,6 +17,10 @@ html, body {
   padding: 24px 48px;
 }
 
+.item_list {
+  width: 60%;
+}
+
 .items__ul {
   list-style: none;
   padding: 0;
@@ -31,6 +35,12 @@ html, body {
 
 .sort__colname {
   margin-right: 16px;
+}
+
+.pagination_buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .pagination__button {
@@ -58,7 +68,11 @@ html, body {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-  .users__list {
+  .item_list_wrapper {
     padding: 16px 24px;
+  }
+
+  .item_list {
+    width: 100%;
   }
 }

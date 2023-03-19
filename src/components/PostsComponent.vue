@@ -24,7 +24,7 @@ export default {
   methods: {
     getPosts() {
       axios
-        .get(`http://localhost:8080/users/${this.id}/posts?_page=${this.page}`)
+        .get(`${import.meta.env.VITE_API_URL}/users/${this.id}/posts?_page=${this.page}`)
         .then((response) => {
           if (response.data?.length === 0) {
             throw new Error('No posts found')
@@ -37,7 +37,6 @@ export default {
           }
         })
         .catch((error) => {
-          console.log(this.isError);
           this.isError = error.message
         })
         .finally(() => {
@@ -102,13 +101,14 @@ export default {
 
 <style scoped>
 .go-back {
-  width: 100%;
+  width: 60%;
   display: flex;
   justify-content: flex-start;
 }
 
-.pagination_buttons {
-  display: flex;
-  justify-content: center;
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .go-back {
+    width: 100%;
+  }
 }
 </style>
